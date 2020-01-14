@@ -1,0 +1,64 @@
+@import './variable';
+
+%has-btn {
+  display: inline-block;
+  border-style: solid;
+  border-width: 2px;
+  padding: 15px 25px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.85);
+  border-color: $secondary-text;
+  background-color: $secondary-text
+}
+
+%has-btn-outline {
+  @extend %has-btn;
+  margin-left: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  border-color: $secondary-text;
+  background-color: transparent;
+}
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: $primary-bg;
+  color: $primary-text;
+}
+
+.main-nav {
+  background-color: $secondary-bg !important;
+
+  b-navbar-item {
+    color: #008080 !important;
+  }
+}
+
+.navbar.is-dark .navbar-start>a.navbar-item:focus,
+.navbar.is-dark .navbar-start>a.navbar-item:hover,
+.navbar.is-dark .navbar-start>a.navbar-item.is-active,
+.navbar.is-dark .navbar-start .navbar-link:focus,
+.navbar.is-dark .navbar-start .navbar-link:hover,
+.navbar.is-dark .navbar-start .navbar-link.is-active,
+.navbar.is-dark .navbar-end>a.navbar-item:focus,
+.navbar.is-dark .navbar-end>a.navbar-item:hover,
+.navbar.is-dark .navbar-end>a.navbar-item.is-active,
+.navbar.is-dark .navbar-end .navbar-link:focus,
+.navbar.is-dark .navbar-end .navbar-link:hover,
+.navbar.is-dark .navbar-end .navbar-link.is-active,
+.navbar.is-dark .navbar-brand>a.navbar-item:hover {
+  background-color: $primary-bg !important;
+  border-bottom: 1px solid $secondary-text;
+}
+
+.navbar {
+  min-height: 4.2rem;
+  border-bottom: 1px solid $secondary-bg;
+}
