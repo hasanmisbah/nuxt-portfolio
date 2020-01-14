@@ -5,7 +5,7 @@
         <div class="columns is-desktop is-vcentered">
           <div class="column">
             <h5>Hello! I am</h5>
-            <h1>Hasan Misbah</h1>
+            <h1 class="title is-1">Hasan Misbah</h1>
           </div>
         </div>
         <div class="intro"></div>

@@ -1,16 +1,19 @@
 <template>
-  <main>
+  <div>
     <header>
       <Navigation />
-      <Nuxt />
     </header>
-  </main>
+    <Nuxt />
+    <Footer />
+  </div>
 </template>
 <script>
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 export default {
   components: {
-    Navigation
+    Navigation,
+    Footer
   },
   data() {
     return {};
