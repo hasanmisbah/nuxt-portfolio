@@ -25,6 +25,12 @@ export default {
     }, {
       href: "https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap",
       rel: "stylesheet"
+    }, {
+      rel: "stylesheet",
+      href: "https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css"
+    }, {
+      rel: "stylesheet",
+      href: "https://use.fontawesome.com/releases/v5.2.0/css/all.css"
     }]
   },
   /*
