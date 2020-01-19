@@ -48,7 +48,9 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    './plugins/modernizr-3.8.0.min.js'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -81,5 +83,14 @@ export default {
       allChunks: true
     },
     extend(config, ctx) {}
+  },
+  pwa: {
+    manifest: {
+      name: "Hasan Misbah's Portfolio",
+      lang: 'en'
+    },
+    meta: {
+      author: 'hasan Misbah'
+    }
   }
 }
