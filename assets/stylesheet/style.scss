@@ -125,7 +125,6 @@ footer {
 section {
   min-height: 90vh;
   display: flex;
-
 }
 
 #intro {
@@ -202,6 +201,7 @@ section {
   }
 
   .section-title {
+    margin-bottom: 20px;
 
     h3 {
       color: $primary-text;
@@ -219,8 +219,6 @@ section {
       }
 
     }
-
-    margin-bottom: 10px;
   }
 
   p {
@@ -237,6 +235,7 @@ section {
     transform: scale(.95);
     filter: grayscale(1);
     transition: all 1s;
+    position: relative;
 
     &:hover {
       transform: scale(1.1);
