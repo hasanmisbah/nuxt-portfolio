@@ -79,18 +79,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extractCSS: {
-      allChunks: true
-    },
+    extractCSS: true,
     extend(config, ctx) {}
-  },
-  pwa: {
-    manifest: {
-      name: "Hasan Misbah's Portfolio",
-      lang: 'en'
-    },
-    meta: {
-      author: 'hasan Misbah'
-    }
   }
 }
