@@ -313,7 +313,7 @@ section {
   margin-right: 0;
 }
 
-.card {
+.skill-card {
   position: relative;
   background-color: #1d293a;
   padding: 25px 25px 35px;
@@ -343,5 +343,27 @@ section {
     height: 10px;
     position: absolute;
     background-color: #00cf5d;
+  }
+}
+
+#portfolio {
+  background-color: $secondary-bg;
+
+  .portfolio-card {
+    background-color: $primary-bg;
+    color: $primary-text;
+
+    a {
+      color: $secondary-text;
+    }
+
+    .subtitle,
+    .title {
+      color: $primary-text;
+    }
+
+    .media {
+      margin-bottom: 10px !important;
+    }
   }
 }

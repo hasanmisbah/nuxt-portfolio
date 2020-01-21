@@ -49,7 +49,8 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    './plugins/modernizr-3.8.0.min.js'
+    './plugins/modernizr-3.8.0.min.js',
+    './plugins/Messages.js'
   ],
   /*
    ** Nuxt.js dev-modules

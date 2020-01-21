@@ -3,6 +3,7 @@
     <Intro />
     <About />
     <Skills />
+    <Portfolio />
   </main>
 </template>
 
@@ -10,6 +11,7 @@
 import Intro from "~/components/Intro";
 import About from "~/components/About";
 import Skills from "~/components/Skills";
+import Portfolio from "~/components/Portfolio";
 
 export default {
   name: "HomePage",
@@ -17,7 +19,8 @@ export default {
   components: {
     Intro,
     About,
-    Skills
+    Skills,
+    Portfolio
   },
   head() {
     return {

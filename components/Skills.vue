@@ -8,10 +8,10 @@
           </div>
 
           <div class="skills">
-            <div class="card" v-for="(skill, index) in skillsItem" :key="index">
+            <div class="skill-card" v-for="(skill, index) in skillsItem" :key="index">
               <h4>{{skill.name}}</h4>
               <p>{{skill.label}}%</p>
-              <div class="progress-bar" :style="'width: '+skill.label+'%;'"></div>
+              <!-- <div class="progress-bar" :style="'width: '+skill.label+'%;'"></div> -->
             </div>
           </div>
         </div>

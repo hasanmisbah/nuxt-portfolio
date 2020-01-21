@@ -38,7 +38,11 @@
 <script>
 export default {
   name: "About",
-  data: {},
+  data() {
+    return {
+      msg: null
+    };
+  },
   methods: {}
 };
 </script>
