@@ -16,22 +16,106 @@ export default {
         hid: 'description',
         name: 'description',
         content: process.env.npm_package_description || ''
+      }, {
+        hid: 'msapplication-TileColor',
+        name: "msapplication-TileColor",
+        content: "#ffffff"
+      },
+      {
+        hid: 'msapplication-TileImage',
+        name: "msapplication-TileImage",
+        content: "/icon/ms-icon-144x144.png"
+      },
+      {
+        hid: 'theme-color',
+        name: "theme-color",
+        content: "#ffffff"
       }
     ],
     link: [{
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico'
-    }, {
-      href: "https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap",
-      rel: "stylesheet"
-    }, {
-      rel: "stylesheet",
-      href: "https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css"
-    }, {
-      rel: "stylesheet",
-      href: "https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-    }]
+        rel: "apple-touch-icon",
+        sizes: "60x60",
+        href: "/icon/apple-icon-60x60.png"
+      },
+      {
+        rel: "apple-touch-icon",
+        sizes: "57x57",
+        href: "/icon/apple-icon-57x57.png"
+      },
+      {
+        rel: "apple-touch-icon",
+        sizes: "72x72",
+        href: "/icon/apple-icon-72x72.png"
+      },
+      {
+        rel: "apple-touch-icon",
+        sizes: "76x76",
+        href: "/icon/apple-icon-76x76.png"
+      },
+      {
+        rel: "apple-touch-icon",
+        sizes: "114x114",
+        href: "/icon/apple-icon-114x114.png"
+      },
+      {
+        rel: "apple-touch-icon",
+        sizes: "120x120",
+        href: "/icon/apple-icon-120x120.png"
+      },
+      {
+        rel: "apple-touch-icon",
+        sizes: "144x144",
+        href: "/icon/apple-icon-144x144.png"
+      },
+      {
+        rel: "apple-touch-icon",
+        sizes: "152x152",
+        href: "/icon/apple-icon-152x152.png"
+      },
+      {
+        rel: "apple-touch-icon",
+        sizes: "180x180",
+        href: "/icon/apple-icon-180x180.png"
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "192x192",
+        href: "/icon/android-icon-192x192.png"
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: "/icon/favicon-32x32.png"
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "96x96",
+        href: "/icon/favicon-96x96.png"
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        href: "/icon/favicon-16x16.png"
+      },
+      {
+        rel: "manifest",
+        href: "/icon/manifest.json"
+      },
+      {
+        href: "https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap",
+        rel: "stylesheet"
+      }, {
+        rel: "stylesheet",
+        href: "https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css"
+      }, {
+        rel: "stylesheet",
+        href: "https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
