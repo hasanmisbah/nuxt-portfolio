@@ -1,31 +1,18 @@
 <template>
-  <main>
-    <Intro />
-    <About />
-    <Skills />
-    <Portfolio />
-  </main>
+  <div id="home">
+    <intro />
+  </div>
 </template>
 
 <script>
-import Intro from "~/components/Intro";
-import About from "~/components/About";
-import Skills from "~/components/Skills";
-import Portfolio from "~/components/Portfolio";
-
+import intro from "../components/HomePage/Intro";
 export default {
   name: "HomePage",
-
   components: {
-    Intro,
-    About,
-    Skills,
-    Portfolio
+    intro
   },
   head() {
-    return {
-      title: "Hasan Misbah || Another Lazy From The Earth "
-    };
+    return {};
   }
 };
 </script>

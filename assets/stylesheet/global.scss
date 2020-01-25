@@ -1,0 +1,35 @@
+@import '../../assets/fonts/style.css';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &::after,
+  &::before {
+    box-sizing: inherit;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+::selection {
+  background-color: #f42a52;
+  color: #fff;
+  padding: 5px;
+}
+
+body {
+  font-family: 'Archia', Quicksand, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}

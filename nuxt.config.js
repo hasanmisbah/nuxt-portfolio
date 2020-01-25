@@ -4,7 +4,7 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Hasan Misbah || FrontEnd Developer',
     meta: [{
         charset: 'utf-8'
       },
@@ -106,7 +106,7 @@ export default {
         href: "/icon/manifest.json"
       },
       {
-        href: "https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap",
+        href: "https://fonts.googleapis.com/css?family=Quicksand&display=swap",
         rel: "stylesheet"
       }, {
         rel: "stylesheet",
@@ -127,7 +127,8 @@ export default {
    ** Global CSS
    */
   css: [
-    'assets/stylesheet/style.scss'
+    //'assets/stylesheet/style.scss',
+    'assets/stylesheet/global.scss'
   ],
   /*
    ** Plugins to load before mounting the App
@@ -148,7 +149,7 @@ export default {
     'nuxt-buefy',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
+    // '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
   ],
