@@ -46,4 +46,12 @@ a.navbar-burger {
     font-size: 22px;
   }
 }
+.navbar-end{
+    .navbar-item{
+        border-bottom: 1px solid transparent;
+        &:hover{
+            border-bottom-color: #013243;
+        }
+    }
+}
 </style>

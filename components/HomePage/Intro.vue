@@ -40,7 +40,12 @@ export default {};
 }
 strong {
 
-$count : length($span-color);
+   @include spanStyle(1,1);
+   @include spanStyle(2,2);
+   @include spanStyle(3,3);
+   @include spanStyle(4,4);
+
+// $count : length($span-color);
 
 
 
@@ -80,13 +85,6 @@ $count : length($span-color);
 }
 .btn {
   @extend %has-btn;
-}
-$count : length($span-color);
-@for $i from 0 through $count{
-    strong:nth-child(#{$i}){
-        box-shadow: 0 10px 0 0 rgba($color: map-get($span-color, color-#{$i}), $alpha: 0),
-        inset 0 -0.125em rgba($color: map-get($span-color, color-#{$i}), $alpha: 0.2);
-    }
 }
 
 </style>
