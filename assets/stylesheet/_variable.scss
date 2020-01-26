@@ -1,4 +1,7 @@
-$primary-bg : #111a28;
+$span-color :(color-1 : #f42a52, color-2 :#d0a90b, color-3: #3069c5, color-4 : #ab5af6, color-5 : #09ae96);
+
+
+$primary-bg : map-get($map: $span-color, $key:color-1);
 $secondary-bg : #1d293a;
 $primary-text : #ffffffd9;
-$secondary-text : #00cf5d;
+$secondary-text : map-get($map: $span-color, $key:color-1);

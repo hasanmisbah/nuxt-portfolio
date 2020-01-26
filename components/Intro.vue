@@ -11,6 +11,9 @@
             <a href="#" class="btn outline is-primary">About Me</a>
           </div>
         </div>
+        <div class="column">
+          <img src="../assets/img/intro-front.svg" alt="Code Review" />
+        </div>
       </div>
     </div>
   </section>
