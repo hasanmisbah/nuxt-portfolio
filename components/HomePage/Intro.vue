@@ -6,9 +6,9 @@
           <p>Hello! I am</p>
           <h1 class="title is-1">Hasan Misbah</h1>
           <p>
-            i am
-            <strong>frontend Developer</strong>,
-            <strong>WordPress Developer</strong> &amp;
+            i am self taught <strong>Programmer</strong>,
+            <strong>Frontend Developer</strong>,
+            <strong>WordPress Developer</strong> &amp; 
             <strong>Linux Freak</strong>
           </p>
           <div class="action-btn">
@@ -28,7 +28,6 @@
 export default {
   data() {
     return {
-      img: ""
     };
   }
 };
@@ -55,19 +54,5 @@ strong {
 }
 .btn {
   @extend %has-btn;
-  position: relative;
-  z-index: 1;
-  &::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: inherit;
-    top: 0;
-    left: 0;
-    filter: blur(0.01rem);
-    opacity: 0.7;
-    z-index: -1;
-  }
 }
 </style>

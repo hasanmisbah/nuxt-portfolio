@@ -1,4 +1,5 @@
 @import '../../assets/fonts/style.css';
+@import './assets.scss';
 
 
 * {
@@ -23,7 +24,7 @@ body {
 }
 
 ::selection {
-  background-color: #f42a52;
+  background-color: $secondary-text;
   color: #fff;
   padding: 5px;
 }
@@ -32,4 +33,10 @@ body {
   font-family: 'Archia', Quicksand, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 1.5rem;
   line-height: 1.6;
+}
+a{
+  color: $secondary-text;
+  &:hover{
+    color: map-get($map: $span-color, $key: color-4);
+  }
 }
