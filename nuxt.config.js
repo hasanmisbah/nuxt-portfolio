@@ -127,15 +127,17 @@ export default {
    ** Global CSS
    */
   css: [
-    //'assets/stylesheet/style.scss',
-    'assets/stylesheet/global.scss'
+    'assets/stylesheet/global.scss',
+    'devicons/css/devicons.css'
   ],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
     './plugins/modernizr-3.8.0.min.js',
-    './plugins/Messages.js'
+    './plugins/Messages.js',
+    './plugins/logrocket.js',
+    './plugins/newrelic.js'
   ],
   /*
    ** Nuxt.js dev-modules

@@ -49,3 +49,72 @@
     }
   }
 }
+
+
+
+
+// // tag Color
+// .color-1 {
+//   span.dark {
+//     background-color: map-get($map: $span-color, $key: color-1);
+//     color: #ffffff;
+//   }
+
+//   span.info {
+//     background-color: rgba($color: map-get($map: $span-color, $key: color-1),
+//         $alpha: 0.2);
+//     color: map-get($map: $span-color, $key: color-1);
+//   }
+// }
+
+// .color-2 {
+//   span.dark {
+//     background-color: map-get($map: $span-color, $key: color-2);
+//     color: #ffffff;
+//   }
+
+//   span.info {
+//     background-color: rgba($color: map-get($map: $span-color, $key: color-2),
+//         $alpha: 0.2);
+//     color: map-get($map: $span-color, $key: color-2);
+//   }
+// }
+
+// .color-3 {
+//   span.dark {
+//     background-color: map-get($map: $span-color, $key: color-3);
+//     color: #ffffff;
+//   }
+
+//   span.info {
+//     background-color: rgba($color: map-get($map: $span-color, $key: color-3),
+//         $alpha: 0.2);
+//     color: map-get($map: $span-color, $key: color-3);
+//   }
+// }
+
+// .color-4 {
+//   span.dark {
+//     background-color: map-get($map: $span-color, $key: color-4);
+//     color: #ffffff;
+//   }
+
+//   span.info {
+//     background-color: rgba($color: map-get($map: $span-color, $key: color-4),
+//         $alpha: 0.2);
+//     color: map-get($map: $span-color, $key: color-4);
+//   }
+// }
+
+// .color-5 {
+//   span.dark {
+//     background-color: map-get($map: $span-color, $key: color-5);
+//     color: #ffffff;
+//   }
+
+//   span.info {
+//     background-color: rgba($color: map-get($map: $span-color, $key: color-5),
+//         $alpha: 0.2);
+//     color: map-get($map: $span-color, $key: color-5);
+//   }
+// }

@@ -80,47 +80,7 @@ body {
   border-bottom: 1px solid $secondary-bg;
 }
 
-footer {
-  background-color: $secondary-bg;
-  padding: 15px 0;
 
-  p {
-    padding: 20px 0;
-  }
-
-  #footer-social {
-    list-style: none;
-    text-align: right;
-
-    li {
-      display: inline-block;
-
-      a {
-        display: block;
-
-        &:hover {
-
-          i {
-            border-color: $secondary-text;
-            background-color: $primary-bg;
-          }
-        }
-
-        i {
-          height: 50px;
-          width: 50px;
-          font-size: 25px;
-          line-height: 1.15;
-          text-align: center;
-          color: $primary-text;
-          border: 1px solid transparent;
-          padding: 10px;
-          border-radius: 50%;
-        }
-      }
-    }
-  }
-}
 
 section {
   min-height: 90vh;
