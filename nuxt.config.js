@@ -114,6 +114,10 @@ export default {
       }, {
         rel: "stylesheet",
         href: "https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      },
+      {
+        href: 'https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css',
+        rel: 'stylesheet'
       }
     ]
   },
@@ -127,8 +131,7 @@ export default {
    ** Global CSS
    */
   css: [
-    'assets/stylesheet/global.scss',
-    'devicons/css/devicons.css'
+    'assets/stylesheet/global.scss'
   ],
   /*
    ** Plugins to load before mounting the App
