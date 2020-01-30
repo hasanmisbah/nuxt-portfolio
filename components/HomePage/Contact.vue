@@ -3,9 +3,11 @@
     <div class="container">
       <div class="columns is-desktop is-vcentered is-vertical-center is-centered">
         <div class="column is-two-thirds is-centered">
-          <template v-if="loading">
-            <b-loading is-full-page :active.sync="loading" :can-cancel="false"></b-loading>
-          </template>
+          <div class="section-title has-text-centered">
+            <h3 class="title is-3">Contact</h3>
+            <p>Have any question or just want to get in touch?</p>
+            <p>Drop me a message and i will contact you back shortly</p>
+          </div>
           <form @submit.prevent="submitForm()">
             <input
               type="checkbox"
@@ -54,14 +56,18 @@
               </div>
             </div>
             <div class="field">
-              <p class="control">
-                <button class="button is-success">Login</button>
-              </p>
+              <button :class="loading? 'is-loading' : ''" class="button is-danger is-medium">
+                <span>Send</span>
+                <span class="icon">
+                  <i class="fa fa-paper-plane"></i>
+                </span>
+              </button>
             </div>
           </form>
         </div>
       </div>
     </div>
+    <FlashMessage position="right bottom" clickable></FlashMessage>
   </section>
 </template>
 
@@ -77,32 +83,82 @@ export default {
         email: "",
         subject: "",
         messages: ""
+      },
+      userInfo: {
+        ip: "",
+        country: "",
+        city: ""
       }
     };
   },
   methods: {
+    notify(status) {
+      if (status == "error") {
+        this.flashMessage.show({
+          status: status,
+          title: "oops! There is an error to send",
+          message: "Try Again",
+          blockClass: "flash-messages",
+          time: 10000
+        });
+      } else if (status == "success") {
+        this.flashMessage.show({
+          status: status,
+          title: "Thank you for being awesome!",
+          message: "I will contact you back shortly",
+          blockClass: "flash-messages",
+          time: 10000
+        });
+      }
+    },
     submitForm(e) {
       this.loading = true;
       let self = this;
       let { name, subject, email, messages } = this.formsData;
+      let { ip, country, city } = this.userInfo;
       axios
         .post("https://submit-form.com/pXmSXkeivd4BRfYC9B_2c", {
           name,
           subject,
           email,
-          messages
+          messages,
+          from: city + ", " + country,
+          ip
         })
         .then(function(response) {
-          console.log(response);
           self.loading = false;
+          self.notify("success");
+          console.log(response);
         })
         .catch(function(error) {
           console.log(error);
         });
     }
+  },
+  created() {
+    let self = this;
+    axios
+      .get("https://freegeoip.app/json/")
+      .then(function(response) {
+        let data = response.data;
+        self.userInfo.ip = data.ip;
+        self.userInfo.country = data.country_name;
+        self.userInfo.city = data.city;
+      })
+      .catch(function(error) {});
   }
 };
 </script>
 
 <style lang="scss">
+@import "../../assets/stylesheet/assets";
+#contact {
+  .btn.primary {
+    @extend %has-btn;
+    cursor: pointer;
+  }
+  .flash-messages {
+    z-index: 99999;
+  }
+}
 </style>

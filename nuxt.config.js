@@ -115,10 +115,6 @@ export default {
         rel: "stylesheet",
         href: "https://use.fontawesome.com/releases/v5.2.0/css/all.css"
       },
-      {
-        href: 'https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css',
-        rel: 'stylesheet'
-      }
     ]
   },
   /*
@@ -131,16 +127,33 @@ export default {
    ** Global CSS
    */
   css: [
-    'assets/stylesheet/global.scss'
+    'assets/stylesheet/global.scss',
+    'node_modules/devicons/css/devicons.scss'
   ],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    './plugins/modernizr-3.8.0.min.js',
-    './plugins/Messages.js',
-    './plugins/logrocket.js',
-    './plugins/newrelic.js'
+  plugins: [{
+      src: './plugins/modernizr-3.8.0.min.js',
+      ssr: false
+    },
+    {
+      src: './plugins/Messages.js',
+      ssr: false
+    },
+    {
+      src: './plugins/logrocket.js',
+      ssr: false
+    },
+    {
+      src: './plugins/newrelic.js',
+      ssr: false
+    },
+    {
+      src: '~/plugins/Notification.js',
+      ssr: true,
+      mode: 'client'
+    }
   ],
   /*
    ** Nuxt.js dev-modules

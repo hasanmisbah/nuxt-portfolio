@@ -41,6 +41,7 @@
 export default {
   data() {
     return {
+      classID: 0,
       primarySkills: [
         {
           name: "HTML5",
@@ -139,18 +140,7 @@ export default {
       ]
     };
   },
-  methods: {
-    getclassName(index) {
-      let val = index + 1;
-      let total = 5;
-      if (val > total) {
-        let curr = val - total;
-        return curr;
-      } else {
-        return val;
-      }
-    }
-  }
+  methods: {}
 };
 </script>
 
