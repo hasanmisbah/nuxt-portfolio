@@ -16,9 +16,6 @@ export default {
     intro,
     About,
     Contact
-  },
-  head() {
-    return {};
   }
 };
 </script>

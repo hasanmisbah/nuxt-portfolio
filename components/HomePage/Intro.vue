@@ -6,9 +6,10 @@
           <p>Hello! I am</p>
           <h1 class="title is-1">Hasan Misbah</h1>
           <p>
-            i am self taught <strong>Programmer</strong>,
+            i am self taught
+            <strong>Programmer</strong>,
             <strong>Frontend Developer</strong>,
-            <strong>WordPress Developer</strong> &amp; 
+            <strong>WordPress Developer</strong> &amp;
             <strong>Linux Freak</strong>
           </p>
           <div class="action-btn">
@@ -17,7 +18,7 @@
           </div>
         </div>
         <div class="column is-6">
-          <img src="../../assets/img/introimg.png" alt="Code Review" />
+          <img :src="require('~/assets/img/introimg.png').default" alt="Code Review" />
         </div>
       </div>
     </div>
@@ -27,9 +28,9 @@
 <script>
 export default {
   data() {
-    return {
-    };
-  }
+    return {};
+  },
+  created() {}
 };
 </script>
 

@@ -127,8 +127,8 @@ export default {
    ** Global CSS
    */
   css: [
-    '~/assets/stylesheet/global.scss',
-    '~/node_modules/devicons/css/devicons.scss'
+    '@/assets/stylesheet/global.scss',
+    '@/node_modules/devicons/css/devicons.scss'
   ],
   /*
    ** Plugins to load before mounting the App

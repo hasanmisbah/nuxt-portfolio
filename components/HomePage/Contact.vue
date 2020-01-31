@@ -16,52 +16,48 @@
               tabindex="-1"
               autocomplete="off"
             />
+            <b-field grouped>
+              <b-field label="Name" expanded>
+                <b-field>
+                  <b-input v-model="formsData.name" placeholder="Name" expanded required></b-input>
+                </b-field>
+              </b-field>
+              <b-field label="Email" expanded>
+                <b-input v-model="formsData.email" placeholder="you@email.com" required></b-input>
+              </b-field>
+            </b-field>
+
+            <b-field grouped>
+              <b-field label="Phone (Optional)" expanded>
+                <b-field>
+                  <b-input v-model="formsData.phone" type="tel" placeholder="Phone" expanded></b-input>
+                </b-field>
+              </b-field>
+              <b-field label="Subject" expanded>
+                <b-input v-model="formsData.subject" placeholder="Subject" required></b-input>
+              </b-field>
+            </b-field>
+
+            <b-field>
+              <b-field label="Messages" expanded>
+                <b-input
+                  v-model="formsData.messages"
+                  type="textarea"
+                  placeholder="Messages"
+                  required
+                ></b-input>
+              </b-field>
+            </b-field>
+
             <div class="field">
-              <label class="label">Name</label>
-              <p class="control has-icons-left">
-                <input v-model="formsData.name" class="input" type="text" placeholder="Name" />
-                <span class="icon is-small is-left">
-                  <i class="fas fa-user"></i>
-                </span>
-              </p>
-            </div>
-            <div class="field">
-              <label class="label">Email</label>
-              <p class="control has-icons-left">
-                <input v-model="formsData.email" class="input" type="email" placeholder="Email" />
-                <span class="icon is-small is-left">
-                  <i class="fas fa-envelope"></i>
-                </span>
-              </p>
-            </div>
-            <div class="field">
-              <label class="label">Subject</label>
-              <p class="control has-icons-left">
-                <input
-                  v-model="formsData.subject"
-                  name="subject"
-                  class="input"
-                  type="text"
-                  placeholder="Subject"
-                />
-                <span class="icon is-small is-left">
-                  <i class="fas fa-pen"></i>
-                </span>
-              </p>
-            </div>
-            <div class="field">
-              <label class="label">Message</label>
-              <div class="control">
-                <textarea v-model="formsData.messages" class="textarea"></textarea>
-              </div>
-            </div>
-            <div class="field">
-              <button :class="loading? 'is-loading' : ''" class="button is-danger is-medium">
-                <span>Send</span>
-                <span class="icon">
-                  <i class="fa fa-paper-plane"></i>
-                </span>
-              </button>
+              <b-button
+                :disabled="sendButton"
+                :loading="loading"
+                native-type="submit"
+                icon-pack="fa"
+                type="is-danger is-medium"
+                icon-right="paper-plane"
+              >Send</b-button>
             </div>
           </form>
         </div>
@@ -78,9 +74,18 @@ export default {
   data() {
     return {
       loading: false,
+      online: null,
+      validated: {
+        submit: true,
+        name: false,
+        email: false,
+        subject: false,
+        messages: false
+      },
       formsData: {
         name: "",
         email: "",
+        phone: "",
         subject: "",
         messages: ""
       },
@@ -91,6 +96,19 @@ export default {
       }
     };
   },
+  computed: {
+    sendButton() {
+      if (this.validate()) {
+        return false;
+      } else {
+        return true;
+      }
+    },
+    statusCheck() {
+      $nuxt.isOffline ? (this.status = false) : (this.status = true);
+      return this.status;
+    }
+  },
   methods: {
     notify(status) {
       if (status == "error") {
@@ -99,7 +117,7 @@ export default {
           title: "oops! There is an error to send",
           message: "Try Again",
           blockClass: "flash-messages",
-          time: 10000
+          time: 20000
         });
       } else if (status == "success") {
         this.flashMessage.show({
@@ -107,28 +125,41 @@ export default {
           title: "Thank you for being awesome!",
           message: "I will contact you back shortly",
           blockClass: "flash-messages",
-          time: 10000
+          time: 20000
         });
+      }
+    },
+    validate() {
+      let { name, email, subject, messages } = this.formsData;
+      if (name && email && subject && messages) {
+        return true;
+      } else {
+        return false;
       }
     },
     submitForm(e) {
       this.loading = true;
       let self = this;
-      let { name, subject, email, messages } = this.formsData;
+      let { name, subject, email, phone, messages } = this.formsData;
       let { ip, country, city } = this.userInfo;
       axios
         .post("https://submit-form.com/pXmSXkeivd4BRfYC9B_2c", {
           name,
           subject,
           email,
+          phone,
           messages,
           from: city + ", " + country,
           ip
         })
         .then(function(response) {
           self.loading = false;
+          self.formsData.name = "";
+          self.formsData.subject = "";
+          self.formsData.email = "";
+          self.formsData.phone = "";
+          self.formsData.messages = "";
           self.notify("success");
-          console.log(response);
         })
         .catch(function(error) {
           console.log(error);
@@ -153,6 +184,9 @@ export default {
 <style lang="scss">
 @import "../../assets/stylesheet/assets";
 #contact {
+  .section-title {
+    margin-bottom: 25px;
+  }
   .btn.primary {
     @extend %has-btn;
     cursor: pointer;

@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
+    "build": "nuxt generate",
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
@@ -16,12 +16,13 @@
     "@nuxtjs/pwa": "^3.0.0-0",
     "@smartweb/vue-flash-message": "^0.5.3",
     "devicons": "^1.8.0",
+    "file-loader": "^5.0.2",
     "logrocket": "^1.0.6",
-    "newrelic": "^6.3.0",
     "node-sass": "^4.13.1",
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.3.2",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "url-loader": "^3.0.0"
   },
   "devDependencies": {}
 }

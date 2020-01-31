@@ -24,7 +24,11 @@
         <div class="column is-one-third-desktop">
           <div class="about-content">
             <div class="images">
-              <img class="image" src="../../assets/img/hasanmisbah.jpg" alt="Hasan Misbah" />
+              <img
+                class="image"
+                :src="require('../../assets/img/hasanmisbah.jpg').default"
+                alt="Hasan Misbah"
+              />
             </div>
           </div>
         </div>
