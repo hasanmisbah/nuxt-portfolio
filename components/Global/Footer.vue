@@ -3,10 +3,10 @@
     <div class="container">
       <div class="columns">
         <div class="column left">
-          <p class="is-center">Copyright &copy; Hasan Misbah</p>
+          <p class="has-text-centered-mobile">Copyright &copy; Hasan Misbah</p>
         </div>
         <div class="column right">
-          <ul id="footer-social">
+          <ul id="footer-social" class="has-text-right has-text-centered-mobile">
             <li>
               <a href>
                 <i class="fab fa-twitter"></i>
@@ -50,11 +50,11 @@ export default {};
 
   p {
     padding: 5px 0;
+    font-size: 1.3rem;
   }
 
   &-social {
     list-style: none;
-    text-align: right;
 
     li {
       display: inline-block;

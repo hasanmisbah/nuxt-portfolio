@@ -1,14 +1,15 @@
 <template>
   <section class="is-fullheight section" id="intro">
     <div class="container">
-      <div class="columns is-desktop is-vcentered is-vertical-center">
-        <div class="column is-16 intro-content">
+      <div class="columns is-vcentered is-vertical-center">
+        <div class="column is-6 intro-content has-text-centered-mobile">
           <p>Hello! I am</p>
           <h1 class="title is-1">Hasan Misbah</h1>
           <p>
-            i am self taught <strong>Programmer</strong>,
+            i am self taught
+            <strong>Programmer</strong>,
             <strong>Frontend Developer</strong>,
-            <strong>WordPress Developer</strong> &amp; 
+            <strong>WordPress Developer</strong> &amp;
             <strong>Linux Freak</strong>
           </p>
           <div class="action-btn">
@@ -16,8 +17,8 @@
             <a href="#" class="btn outline is-primary">About Me</a>
           </div>
         </div>
-        <div class="column is-6">
-          <img src="../../assets/img/introimg.png" alt="Code Review" />
+        <div class="is-hidden-mobile column is-6">
+          <img :src="require('~/assets/img/introimg.png').default" alt="Code Review" />
         </div>
       </div>
     </div>
@@ -27,9 +28,9 @@
 <script>
 export default {
   data() {
-    return {
-    };
-  }
+    return {};
+  },
+  created() {}
 };
 </script>
 

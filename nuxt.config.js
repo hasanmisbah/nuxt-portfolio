@@ -108,13 +108,7 @@ export default {
       {
         href: "https://fonts.googleapis.com/css?family=Quicksand&display=swap",
         rel: "stylesheet"
-      }, {
-        rel: "stylesheet",
-        href: "https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css"
-      }, {
-        rel: "stylesheet",
-        href: "https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      },
+      }
     ]
   },
   /*
@@ -127,8 +121,8 @@ export default {
    ** Global CSS
    */
   css: [
-    // '~/assets/stylesheet/global.scss',
-    // '~/node_modules/devicons/css/devicons.scss'
+    '@/assets/stylesheet/global.scss',
+    '@/node_modules/devicons/css/devicons.scss'
   ],
   /*
    ** Plugins to load before mounting the App
@@ -150,15 +144,27 @@ export default {
       ssr: false
     },
     {
+      src: './node_modules/@fortawesome/fontawesome-free/css/all.min.css',
+      ssr: false
+    },
+    {
+      src: '~/node_modules/@mdi/font/css/materialdesignicons.min.css',
+      ssr: false
+    },
+    {
       src: '~/plugins/Notification.js',
-      ssr: true,
+      ssr: false,
       mode: 'client'
     }
   ],
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [],
+  buildModules: [
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-157539423-1'
+    }]
+  ],
   /*
    ** Nuxt.js modules
    */
@@ -185,5 +191,13 @@ export default {
      */
     extractCSS: true,
     extend(config, ctx) {}
+  },
+  debug: {
+    enabled: true,
+    sendHitTask: true
+  },
+  render: {
+    csp: true,
+    addMeta: true
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <section id="about" class="is-fullheight section">
     <div class="container">
-      <div class="columns is-desktop is-vcentered is-vertical-center">
+      <div class="columns custom-columns is-vcentered is-vertical-center">
         <div class="column is-two-thirds-desktop">
           <div class="about-content">
             <div class="section-title">
@@ -24,7 +24,11 @@
         <div class="column is-one-third-desktop">
           <div class="about-content">
             <div class="images">
-              <img class="image" src="../../assets/img/hasanmisbah.jpg" alt="Hasan Misbah" />
+              <img
+                class="image"
+                :src="require('~/assets/img/hasanmisbah.jpg').default"
+                alt="Hasan Misbah"
+              />
             </div>
           </div>
         </div>
@@ -44,6 +48,12 @@ export default {
 
 <style lang="scss">
 @import "../../assets/stylesheet/assets";
+@media (max-width: 768px) {
+  .custom-columns {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+}
 #about {
   display: flex;
   background-color: #f5f5f5;
