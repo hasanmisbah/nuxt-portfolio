@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <intro />
+    <Intro />
     <About />
     <Testimonial />
     <Contact />
@@ -8,17 +8,17 @@
 </template>
 
 <script>
-import intro from "../components/HomePage/Intro";
+import Intro from "../components/HomePage/Intro";
 import About from "../components/HomePage/About";
-import Contact from "../components/HomePage/Contact";
 import Testimonial from "../components/HomePage/Testimonial";
+import Contact from "../components/HomePage/Contact";
 export default {
   name: "HomePage",
   components: {
-    intro,
+    Intro,
     About,
-    Contact,
-    Testimonial
+    Testimonial,
+    Contact
   }
 };
 </script>
