@@ -45,33 +45,33 @@ export default {
       primarySkills: [
         {
           name: "HTML5",
-          icon: "fab fa-html5",
+          icon: "mdi mdi-language-html5",
           label: "85"
         },
         {
           name: "CSS3",
-          icon: "fab fa-css3",
+          icon: "mdi mdi-language-css3",
           label: "85"
         },
         {
           name: "Javascript",
-          icon: "fab fa-js",
+          icon: "mdi mdi-language-javascript",
           label: "75"
         },
         {
           name: "Jquery",
-          icon: "devicons devicons-jquery",
+          icon: "mdi mdi-jquery",
           label: "75"
         },
         {
           name: "VueJS",
-          icon: "fab fa-vuejs",
+          icon: "mdi mdi-vuejs",
           label: "75"
         },
 
         {
           name: "PHP",
-          icon: "fab fa-php",
+          icon: "mdi mdi-language-php",
           label: "80"
         },
         {
@@ -81,7 +81,7 @@ export default {
         },
         {
           name: "laravel",
-          icon: "fab fa-laravel",
+          icon: "mdi mdi-laravel",
           label: "50"
         },
         {
@@ -96,20 +96,20 @@ export default {
         },
         {
           name: "Sass",
-          icon: "devicons devicons-sass",
+          icon: "mdi mdi-sass",
           label: "85"
         },
 
         {
           name: "Git",
-          icon: "devicons devicons-git",
+          icon: "mdi mdi-git",
           label: "85"
         }
       ],
       familiarSkill: [
         {
           name: "Nuxt JS",
-          icon: "fab fa-vuejs",
+          icon: "mdi mdi-nuxt",
           label: "70"
         },
         {
@@ -119,12 +119,12 @@ export default {
         },
         {
           name: "Vuetify",
-          icon: "fab fa-vuejs",
+          icon: "mdi mdi-vuetify",
           label: "70"
         },
         {
           name: "BulmaCSS",
-          icon: "devicons devicons-code",
+          icon: "mdi mdi-bulma",
           label: "70"
         },
         {
@@ -134,7 +134,7 @@ export default {
         },
         {
           name: "Ubuntu",
-          icon: "devicons devicons-ubuntu",
+          icon: "mdi mdi-ubuntu",
           label: "70"
         }
       ]
@@ -173,7 +173,7 @@ export default {
       margin-bottom: 0.5rem;
       .control {
         span {
-          font-size: 1.2rem;
+          font-size: 1.125rem;
         }
       }
     }

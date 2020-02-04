@@ -5,11 +5,17 @@
         <h3 class="title is-3">Testimonials</h3>
         <p>Lets know! what my clients say's about me.</p>
       </div>
-      <div class="columns is-vcentered is-vertical-center">
-        <!-- Slider -->
-        <b-carousel with-carousel-list>
-          <b-carousel-item v-for="(item, index) in testimonials" :key="index" :items-to-show="3">
-            <!-- Contect -->
+      <div class="columnss is-centered is-vcentered is-vertical-center">
+        <!-- test slide -->
+        <carousel
+          :navigationNextLabel="slider.nextLink"
+          :navigationPrevLabel="slider.prevLink"
+          :perPage="3"
+          class="columns is-centered is-vcentered is-vertical-center"
+          :navigationEnabled="true"
+          :paginationEnabled="false"
+        >
+          <slide class="column slide-item" v-for="(item, index) in testimonials" :key="index">
             <div class="testimonial">
               <div class="icon">
                 <span>&#44;&#44;</span>
@@ -20,94 +26,28 @@
                 <p class="company">{{item.company}}</p>
               </div>
             </div>
-            <!-- Content -->
-          </b-carousel-item>
-        </b-carousel>
-        <!-- /Slider -->
-        <!-- <div v-for="(item, index) in testimonials" :key="index" class="column is-3"> -->
-        <!-- Contect -->
-        <!-- <div class="testimonial">
-            <div class="icon">
-              <span>&#44;&#44;</span>
-            </div>
-            <div class="messages">
-              <p class="review">{{item.messages}}</p>
-              <h3>{{item.name}}</h3>
-              <p class="company">{{item.company}}</p>
-            </div>
-        </div>-->
-        <!-- Content -->
-        <!-- </div> -->
+          </slide>
+        </carousel>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import { Carousel, Slide } from "vue-carousel";
+
 export default {
+  components: {
+    Carousel,
+    Slide
+  },
   data() {
     return {
+      slider: {
+        nextLink: '<i class="mdi mdi-chevron-right-circle-outline"></>',
+        prevLink: '<i class="mdi mdi-chevron-left-circle-outline"></>'
+      },
       testimonials: [
-        {
-          name: "Fabio alenca",
-          messages:
-            "Hasan is a great and hardworking guy. I luckily have him. He helped me so much.",
-          company: "Brandica"
-        },
-        {
-          name: "Melissa coen",
-          messages:
-            "Hasan is a great Designer, hard worker  and a friendly person. He Know how to maintain time and Deliver work on exact time.",
-          company: "Fiverr Client"
-        },
-        {
-          name: "Fabio alenca",
-          messages:
-            "Hasan is a great and hardworking guy. I luckily have him. He helped me so much.",
-          company: "Brandica"
-        },
-        {
-          name: "Melissa coen",
-          messages:
-            "Hasan is a great Designer, hard worker  and a friendly person. He Know how to maintain time and Deliver work on exact time.",
-          company: "Fiverr Client"
-        },
-        {
-          name: "Fabio alenca",
-          messages:
-            "Hasan is a great and hardworking guy. I luckily have him. He helped me so much.",
-          company: "Brandica"
-        },
-        {
-          name: "Melissa coen",
-          messages:
-            "Hasan is a great Designer, hard worker  and a friendly person. He Know how to maintain time and Deliver work on exact time.",
-          company: "Fiverr Client"
-        },
-        {
-          name: "Fabio alenca",
-          messages:
-            "Hasan is a great and hardworking guy. I luckily have him. He helped me so much.",
-          company: "Brandica"
-        },
-        {
-          name: "Melissa coen",
-          messages:
-            "Hasan is a great Designer, hard worker  and a friendly person. He Know how to maintain time and Deliver work on exact time.",
-          company: "Fiverr Client"
-        },
-        {
-          name: "Fabio alenca",
-          messages:
-            "Hasan is a great and hardworking guy. I luckily have him. He helped me so much.",
-          company: "Brandica"
-        },
-        {
-          name: "Melissa coen",
-          messages:
-            "Hasan is a great Designer, hard worker  and a friendly person. He Know how to maintain time and Deliver work on exact time.",
-          company: "Fiverr Client"
-        },
         {
           name: "Fabio alenca",
           messages:
@@ -128,11 +68,22 @@ export default {
 
 <style lang="scss">
 @import "../../assets/stylesheet/assets";
+
+.VueCarousel-navigation-button {
+  i {
+    font-size: 2.3rem;
+    color: map-get($map: $span-color, $key: color-5);
+  }
+}
+
 #testimonials {
   background-color: rgba(
     $color: map-get($map: $span-color, $key: color-5),
     $alpha: 0.05
   );
+  .slide-item {
+    padding-top: 25px;
+  }
   font-size: 1.3rem;
   display: flex;
   align-items: center;
