@@ -55,6 +55,18 @@ export default {
           company: "Brandica"
         },
         {
+          name: "Suzanne",
+          messages:
+            "My Experience working with Hasan has been very positive. I receive quality service from him. I highly recommend him to everyone because I think he is one a of kind.",
+          company: "Fiverr Client"
+        },
+        {
+          name: "Maximilian",
+          messages:
+            "Hasan solved my problem super fast and exactly as I needed. I like it when someone does exactly what is needed and this was amazing. Highly recommended! Thank you!",
+          company: "Fiverr Client"
+        },
+        {
           name: "Melissa coen",
           messages:
             "Hasan is a great Designer, hard worker  and a friendly person. He Know how to maintain time and Deliver work on exact time.",

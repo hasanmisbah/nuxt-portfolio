@@ -45,33 +45,33 @@ export default {
       primarySkills: [
         {
           name: "HTML5",
-          icon: "mdi mdi-language-html5",
+          icon: "mdi mdi-language-html5 mdi-24px",
           label: "85"
         },
         {
           name: "CSS3",
-          icon: "mdi mdi-language-css3",
+          icon: "mdi mdi-language-css3 mdi-24px",
           label: "85"
         },
         {
           name: "Javascript",
-          icon: "mdi mdi-language-javascript",
+          icon: "mdi mdi-language-javascript mdi-24px",
           label: "75"
         },
         {
           name: "Jquery",
-          icon: "mdi mdi-jquery",
+          icon: "mdi mdi-jquery mdi-24px",
           label: "75"
         },
         {
           name: "VueJS",
-          icon: "mdi mdi-vuejs",
+          icon: "mdi mdi-vuejs mdi-24px",
           label: "75"
         },
 
         {
           name: "PHP",
-          icon: "mdi mdi-language-php",
+          icon: "mdi mdi-language-php mdi-24px",
           label: "80"
         },
         {
@@ -81,7 +81,7 @@ export default {
         },
         {
           name: "laravel",
-          icon: "mdi mdi-laravel",
+          icon: "mdi mdi-laravel mdi-24px",
           label: "50"
         },
         {
@@ -96,35 +96,35 @@ export default {
         },
         {
           name: "Sass",
-          icon: "mdi mdi-sass",
+          icon: "mdi mdi-sass mdi-24px",
           label: "85"
         },
 
         {
           name: "Git",
-          icon: "mdi mdi-git",
+          icon: "mdi mdi-git mdi-24px",
           label: "85"
         }
       ],
       familiarSkill: [
         {
           name: "Nuxt JS",
-          icon: "mdi mdi-nuxt",
+          icon: "mdi mdi-nuxt mdi-24px",
           label: "70"
         },
         {
           name: "Vuex",
-          icon: "fab fa-vuejs",
+          icon: "fab fa-vuejs mdi-24px",
           label: "70"
         },
         {
           name: "Vuetify",
-          icon: "mdi mdi-vuetify",
+          icon: "mdi mdi-vuetify mdi-24px",
           label: "70"
         },
         {
           name: "BulmaCSS",
-          icon: "mdi mdi-bulma",
+          icon: "mdi mdi-bulma mdi-24px",
           label: "70"
         },
         {
@@ -134,7 +134,7 @@ export default {
         },
         {
           name: "Ubuntu",
-          icon: "mdi mdi-ubuntu",
+          icon: "mdi mdi-ubuntu mdi-24px",
           label: "70"
         }
       ]
