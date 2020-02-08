@@ -5,12 +5,12 @@
         <h3 class="title is-3">Testimonials</h3>
         <p>Lets know! what my clients say's about me.</p>
       </div>
-      <div class="columnss is-centered is-vcentered is-vertical-center">
+      <div class="columns is-centered is-vcentered is-vertical-center">
         <!-- test slide -->
         <carousel
+          :perPageCustom="[[480, 5], [768, 3]]"
           :navigationNextLabel="slider.nextLink"
           :navigationPrevLabel="slider.prevLink"
-          :perPage="3"
           class="columns is-centered is-vcentered is-vertical-center"
           :navigationEnabled="true"
           :paginationEnabled="false"
@@ -53,6 +53,18 @@ export default {
           messages:
             "Hasan is a great and hardworking guy. I luckily have him. He helped me so much.",
           company: "Brandica"
+        },
+        {
+          name: "Suzanne",
+          messages:
+            "My Experience working with Hasan has been very positive. I receive quality service from him. I highly recommend him to everyone because I think he is one a of kind.",
+          company: "Fiverr Client"
+        },
+        {
+          name: "Maximilian",
+          messages:
+            "Hasan solved my problem super fast and exactly as I needed. I like it when someone does exactly what is needed and this was amazing. Highly recommended! Thank you!",
+          company: "Fiverr Client"
         },
         {
           name: "Melissa coen",

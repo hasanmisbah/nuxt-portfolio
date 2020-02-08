@@ -4,15 +4,19 @@
       <h3 class="title is-3">Skills</h3>
     </div>
     <div class="skill skill-primary">
-      <h2 class="key-skill title is-4">PROFICIENT</h2>
-      <ul>
-        <li v-for="(skill, index ) in primarySkills" :key="index">
+      <h2 class="key-skill title is-4">Language</h2>
+      <ul class="columns is-multiline is-centered">
+        <li
+          v-for="(skill, index ) in primarySkills"
+          :key="index"
+          class="column is-narrow is-one-third-desktop is-full-mobile"
+        >
           <div class="control">
             <div class="tags has-addons">
-              <span class="tag is-dark">
+              <span class="tag icon">
                 <i :class="skill.icon"></i>
               </span>
-              <span class="tag is-info">{{skill.name}}</span>
+              <span class="tag">{{skill.name}}</span>
             </div>
           </div>
         </li>
@@ -20,15 +24,19 @@
     </div>
 
     <div class="skill skill-familiar">
-      <h2 class="key-skill title is-4">FAMILIAR WITH</h2>
-      <ul>
-        <li v-for="(skill, index ) in familiarSkill" :key="index">
+      <h2 class="key-skill title is-4">Framework/Tools</h2>
+      <ul class="columns is-multiline">
+        <li
+          v-for="(skill, index ) in familiarSkill"
+          :key="index"
+          class="column is-narrow is-one-third-desktop is-full-mobile"
+        >
           <div class="control">
             <div class="tags has-addons">
-              <span class="tag is-dark">
+              <span class="tag icon">
                 <i :class="skill.icon"></i>
               </span>
-              <span class="tag is-info">{{skill.name}}</span>
+              <span class="tag">{{skill.name}}</span>
             </div>
           </div>
         </li>
@@ -45,33 +53,33 @@ export default {
       primarySkills: [
         {
           name: "HTML5",
-          icon: "mdi mdi-language-html5",
+          icon: "mdi mdi-language-html5 mdi-24px",
           label: "85"
         },
         {
           name: "CSS3",
-          icon: "mdi mdi-language-css3",
+          icon: "mdi mdi-language-css3 mdi-24px",
           label: "85"
         },
         {
           name: "Javascript",
-          icon: "mdi mdi-language-javascript",
+          icon: "mdi mdi-language-javascript mdi-24px",
           label: "75"
         },
         {
           name: "Jquery",
-          icon: "mdi mdi-jquery",
+          icon: "mdi mdi-jquery mdi-24px",
           label: "75"
         },
         {
           name: "VueJS",
-          icon: "mdi mdi-vuejs",
+          icon: "mdi mdi-vuejs mdi-24px",
           label: "75"
         },
 
         {
           name: "PHP",
-          icon: "mdi mdi-language-php",
+          icon: "mdi mdi-language-php mdi-24px",
           label: "80"
         },
         {
@@ -81,7 +89,7 @@ export default {
         },
         {
           name: "laravel",
-          icon: "mdi mdi-laravel",
+          icon: "mdi mdi-laravel mdi-24px",
           label: "50"
         },
         {
@@ -96,35 +104,35 @@ export default {
         },
         {
           name: "Sass",
-          icon: "mdi mdi-sass",
+          icon: "mdi mdi-sass mdi-24px",
           label: "85"
         },
 
         {
           name: "Git",
-          icon: "mdi mdi-git",
+          icon: "mdi mdi-git mdi-24px",
           label: "85"
         }
       ],
       familiarSkill: [
         {
           name: "Nuxt JS",
-          icon: "mdi mdi-nuxt",
+          icon: "mdi mdi-nuxt mdi-24px",
           label: "70"
         },
         {
           name: "Vuex",
-          icon: "fab fa-vuejs",
+          icon: "fab fa-vuejs mdi-24px",
           label: "70"
         },
         {
           name: "Vuetify",
-          icon: "mdi mdi-vuetify",
+          icon: "mdi mdi-vuetify mdi-24px",
           label: "70"
         },
         {
           name: "BulmaCSS",
-          icon: "mdi mdi-bulma",
+          icon: "mdi mdi-bulma mdi-24px",
           label: "70"
         },
         {
@@ -134,7 +142,7 @@ export default {
         },
         {
           name: "Ubuntu",
-          icon: "mdi mdi-ubuntu",
+          icon: "mdi mdi-ubuntu mdi-24px",
           label: "70"
         }
       ]
@@ -167,11 +175,33 @@ export default {
     margin-bottom: 1.6rem;
   }
   ul {
+    margin-top: 20px;
+    display: flex;
     li {
-      display: inline-block;
-      margin-right: 10px;
-      margin-bottom: 0.5rem;
+      font-weight: 600;
       .control {
+        width: 100%;
+        .tags {
+          background-color: #ffffff;
+          border-right: 3px solid transparent;
+          transition: all 0.3s ease-in;
+          &:hover {
+            border-color: map-get($map: $span-color, $key: color-5);
+          }
+          .tag {
+            color: map-get($map: $span-color, $key: color-5);
+            background-color: transparent;
+            margin: 0;
+            padding: 0.6rem;
+            &.icon {
+              margin-right: 10px;
+              padding-right: 1.5rem;
+              padding-left: 1.5rem;
+              background-color: map-get($map: $span-color, $key: color-5);
+              color: #ffffff;
+            }
+          }
+        }
         span {
           font-size: 1.125rem;
         }

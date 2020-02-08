@@ -80,7 +80,11 @@ body {
   border-bottom: 1px solid $secondary-bg;
 }
 
-
+a {
+  &:hover {
+    color: rgba($color: #000000, $alpha: 0.9);
+  }
+}
 
 section {
   min-height: 90vh;
@@ -88,60 +92,12 @@ section {
 }
 
 #intro {
-  background-image: url(../../assets/img/home-bg.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
   align-items: center;
   position: relative;
   z-index: 2;
 
-  &::after {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    content: "";
-    left: 0;
-    top: 0;
-    background-color: rgba($color: #111a28, $alpha: 0.9);
-    z-index: -1;
-  }
 
-  .intro-content {
-    max-width: 1200px;
-    padding-left: 100px;
 
-    .action-btn {
-      margin-top: 25px;
-
-      .btn {
-        @extend %has-btn;
-
-        &.outline {
-          @extend %has-btn-outline;
-        }
-      }
-    }
-
-    p {
-      font-size: 22px;
-      color: #00cf5d;
-    }
-
-    h3 {
-      color: #00cf5d;
-      font-size: 1.38316rem;
-      font-weight: 700;
-    }
-
-    h1.title.is-1 {
-      font-size: 78px;
-      font-weight: 700;
-      margin-bottom: 15px;
-      color: #ffffffd9;
-    }
-  }
 }
 
 #about {

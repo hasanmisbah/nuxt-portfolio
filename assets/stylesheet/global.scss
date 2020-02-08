@@ -34,9 +34,11 @@ body {
   font-size: 1.5rem;
   line-height: 1.6;
 }
-a{
+
+a {
   color: $secondary-text;
-  &:hover{
-    color: map-get($map: $span-color, $key: color-4);
+
+  &:hover {
+    color: rgba($color: #000000, $alpha: 0.9);
   }
 }
