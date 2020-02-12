@@ -159,6 +159,11 @@ export default {
       src: '~/plugins/Notification.js',
       ssr: false,
       mode: 'client'
+    },
+    {
+      src: '~/plugins/filter/dateFilter.js',
+      ssr: false,
+      mode: 'client'
     }
   ],
   /*

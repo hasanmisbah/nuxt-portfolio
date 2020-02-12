@@ -7,10 +7,11 @@
     <template slot="start"></template>
 
     <template slot="end">
-      <b-navbar-item tag="router-link" :to="{path :'#' }">Home</b-navbar-item>
+      <b-navbar-item tag="router-link" :to="{path :'/' }">Home</b-navbar-item>
       <b-navbar-item tag="router-link" :to="{path :'#' }">About</b-navbar-item>
       <b-navbar-item tag="router-link" :to="{path :'#' }">Projects</b-navbar-item>
       <b-navbar-item tag="router-link" :to="{path :'#' }">Testimonial</b-navbar-item>
+      <b-navbar-item tag="router-link" :to="{path :'/blog' }">Blog</b-navbar-item>
       <b-navbar-item tag="router-link" :to="{path :'#' }">Contact</b-navbar-item>
     </template>
 
