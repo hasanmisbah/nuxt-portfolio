@@ -2,6 +2,24 @@
   <div class="container content">
     <b-loading :is-full-page="true" :active.sync="loading" :can-cancel="false"></b-loading>
     <div class="columns is-multiline">
+      <template>
+        <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+          <ul>
+            <li>
+              <a href="#">Bulma</a>
+            </li>
+            <li>
+              <a href="#">Documentation</a>
+            </li>
+            <li>
+              <a href="#">Components</a>
+            </li>
+            <li class="is-active">
+              <a href="#" aria-current="page">Breadcrumb</a>
+            </li>
+          </ul>
+        </nav>
+      </template>
       <template v-if="posts">
         <div v-for="(post, index) in posts" :key="index" class="column is-full">
           <article class="blog-card">

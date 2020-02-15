@@ -17,7 +17,6 @@ function messages() {
     );
   }
 }
-// setTimeout(function () {
-//   console.clear();
-//   messages()
-// }, 3000);
+setTimeout(function () {
+  messages()
+}, 3000);
