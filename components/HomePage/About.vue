@@ -56,7 +56,7 @@ export default {
 }
 #about {
   display: flex;
-  background-color: #f5f5f5;
+  background-color: #f9f9ff;
   align-items: center;
   min-height: 90vh;
   display: flex;

@@ -182,6 +182,7 @@ export default {
       .control {
         width: 100%;
         .tags {
+          box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
           background-color: #ffffff;
           border-right: 3px solid transparent;
           transition: all 0.3s ease-in;
